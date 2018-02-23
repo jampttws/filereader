@@ -27,6 +27,7 @@ public class AppendStringBuilder implements Runnable{
 		} 
 	}
 	
+	@Override
 	public String toString(){
 		return String.format("Read %d charactors", builder.length());
 	}

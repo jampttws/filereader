@@ -31,6 +31,7 @@ public class AppendStringTask implements Runnable{
 		}
 	}
 	
+	@Override
 	public String toString(){
 		return String.format("Read %d charactors", data.length());
 	}

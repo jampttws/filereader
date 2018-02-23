@@ -29,6 +29,7 @@ public class BufferedReaderTask implements Runnable{
 		}
 	}
 	
+	@Override
 	public String toString(){
 		return String.format("Read %d charactors", result.length());
 	}
