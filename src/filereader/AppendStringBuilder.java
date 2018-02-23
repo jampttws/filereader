@@ -8,11 +8,13 @@ import java.io.InputStreamReader;
 
 public class AppendStringBuilder implements Runnable{
 
-	public String readFileToStringBuilder(String filename){
-		StringBuilder builder = new StringBuilder();
+    private StringBuilder builder = new StringBuilder();
+
+	@Override
+	public void run() {
 		InputStream in = null;
 		try{
-			in = new FileInputStream(filename);
+			in = new FileInputStream("src/filereader/Alice-in-Wonderland.txt");
 			InputStreamReader reader = new InputStreamReader(in);
 			
 			int i;
@@ -23,13 +25,10 @@ public class AppendStringBuilder implements Runnable{
 		}catch (IOException ioe) {
 			ioe.printStackTrace();
 		} 
-		return builder.toString();
 	}
-
-	@Override
-	public void run() {
-		String read = readFileToStringBuilder("src/filereader/Alice-in-Wonderland.txt");
-		System.out.print("Read "+ read.length() + " characters ");
+	
+	public String toString(){
+		return String.format("Read %d charactors", builder.length());
 	}
 	
 	

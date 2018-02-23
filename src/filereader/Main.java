@@ -13,8 +13,6 @@ public class Main {
 		time.measure(task2);
 		time.measure(task3);
 		
-		
-		
 	}
 
 }

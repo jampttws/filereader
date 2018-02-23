@@ -7,14 +7,16 @@ import java.io.IOException;
 
 public class BufferedReaderTask implements Runnable{
 
-	public static String readFile(String filename){
+    private String result = "";
+	
+	@Override
+	public void run() {
 		FileReader reader;
 		BufferedReader br;
-        String result = "";
         String line;
 		
 		try{
-			reader = new FileReader(filename);
+			reader = new FileReader("src/filereader/Alice-in-Wonderland.txt");
 			br = new BufferedReader(reader);
 			while((line = br.readLine()) != null){
 				result = result + line + '\n';
@@ -24,14 +26,11 @@ public class BufferedReaderTask implements Runnable{
 			e.printStackTrace();	
 		}catch (IOException ioe) {
 			ioe.printStackTrace();
-		} 		
-		return result;	
+		}
 	}
 	
-	@Override
-	public void run() {
-		String read = readFile("src/filereader/Alice-in-Wonderland.txt");
-		System.out.print("Read "+ read.length() + " characters ");
+	public String toString(){
+		return String.format("Read %d charactors", result.length());
 	}
 
 }

@@ -1,5 +1,6 @@
 package filereader;
 
+
 public class TaskTimer{
 
 	private static Stopwatch watch = new Stopwatch();
@@ -8,7 +9,7 @@ public class TaskTimer{
 		watch.start();
 		task.run();
 		watch.stop();
-		System.out.printf("%.6f sec.\n", watch.getElapsed());		
+		System.out.printf("%s %.6f sec.\n", task.toString(), watch.getElapsed());		
 	}
 
 }
