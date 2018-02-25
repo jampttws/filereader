@@ -5,10 +5,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * This class use BufferedReader to read a file 
+ * and return it to String.
+ * @author Tanasorn Tritawisup
+ *
+ */
 public class BufferedReaderTask implements Runnable{
 
     private String result = "";
 	
+    /** Read a text file by using BufferedReader and get it into String. */
 	@Override
 	public void run() {
 		FileReader reader;

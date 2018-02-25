@@ -6,10 +6,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * This class use basic ways to read a file 
+ * by using InputStream and return to String.
+ * @author Tanasorn Tritawisup
+ *
+ */
 public class AppendStringTask implements Runnable{
 	
 	private String data = "";
 	
+	/**Read a file an make a String.*/
 	@Override
 	public void run() {
 		InputStream in = null;

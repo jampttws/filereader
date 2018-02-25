@@ -6,10 +6,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * This class use InputStream to read a file 
+ * and return it to String by using StringBuilder.
+ * @author Tanasorn Tritawisup
+ *
+ */
 public class AppendStringBuilder implements Runnable{
 
     private StringBuilder builder = new StringBuilder();
 
+    /**Read a text file and make a String from StringBuilder.*/
 	@Override
 	public void run() {
 		InputStream in = null;
